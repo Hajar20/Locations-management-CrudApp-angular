@@ -99,6 +99,16 @@
       "availableUnits": 6,
       "wifi": true,
       "laundry": true
+    },
+    {
+      "id": 12,
+      "name": "test",
+      "city": "test",
+      "state": "GA",
+      "photo": "C:\\fakepath\\expose vs publish.PNG",
+      "availableUnits": 9,
+      "wifi": "True",
+      "laundry": "False"
     }
   ]
 }

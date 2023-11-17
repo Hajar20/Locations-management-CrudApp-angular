@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AppService} from "../app.service";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-add-item',
@@ -7,6 +8,17 @@ import {AppService} from "../app.service";
   styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit{
+
+  location = new FormGroup({
+    id : new FormControl(''),
+    name : new FormControl(''),
+    city :new FormControl(''),
+    state :new FormControl('Choose a state ...'),
+    photo : new FormControl(''),
+    availableUnits : new FormControl(''),
+    wifi : new FormControl('False'),
+    laundry : new FormControl('False')
+  })
  constructor(private app : AppService) {
  }
    stateCodes:any[] = [];
@@ -17,5 +29,10 @@ export class AddItemComponent implements OnInit{
      "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
      "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
  }
-
+collectData(): void{
+  //console.warn(this.location.value)
+  this.app.saveLocation(this.location.value).subscribe((e:any) =>{
+    console.warn("The location :",e)
+  })
+}
 }

@@ -9,4 +9,8 @@ baseURL = "http://localhost:3000/"
   getList(){
     return this.http.get(this.baseURL+"locations")
   }
+  saveLocation(location:any){
+  //console.warn("new location : ", location)
+  return this.http.post(this.baseURL+"locations",location)
+  }
 }

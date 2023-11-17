@@ -14,7 +14,7 @@ export class ListItemComponent implements OnInit{
   ngOnInit(): void {
     // @ts-ignore
     this.app.getList().subscribe((res: any[])=>{
-      console.log(res)
+      //console.log(res)
       this.collection=res
     })
   }
