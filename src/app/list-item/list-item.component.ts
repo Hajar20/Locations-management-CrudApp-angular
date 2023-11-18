@@ -9,6 +9,7 @@ import {AppService} from "../app.service";
 export class ListItemComponent implements OnInit{
   constructor(private app : AppService) {
   }
+  alert:boolean = false
   collection:any=[];
   //a lifecycle hook in Angular that is called after the constructor is called and after the component's inputs have been initialized.
   ngOnInit(): void {
@@ -22,8 +23,11 @@ export class ListItemComponent implements OnInit{
   removeLocation(id:number){
     this.app.removeLocation(id).subscribe((r)=>{
       this.fetchLocationList()
+      this.alert=true
     })
 
   }
-
+  closeAlert(){
+    this.alert=false
+  }
 }
