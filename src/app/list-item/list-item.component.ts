@@ -9,14 +9,21 @@ import {AppService} from "../app.service";
 export class ListItemComponent implements OnInit{
   constructor(private app : AppService) {
   }
-  collection:any[]=[];
+  collection:any=[];
   //a lifecycle hook in Angular that is called after the constructor is called and after the component's inputs have been initialized.
   ngOnInit(): void {
-    // @ts-ignore
-    this.app.getList().subscribe((res: any[])=>{
-      //console.log(res)
-      this.collection=res
+    this.fetchLocationList()
+  }
+  fetchLocationList(): void {
+    this.app.getList().subscribe((res) => {
+      this.collection = res;
+    });
+  }
+  removeLocation(id:number){
+    this.app.removeLocation(id).subscribe((r)=>{
+      this.fetchLocationList()
     })
+
   }
 
 }

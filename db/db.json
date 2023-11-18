@@ -1,36 +1,6 @@
 {
   "locations": [
     {
-      "id": 0,
-      "name": "Acme Fresh Start Housing",
-      "city": "Chicago",
-      "state": "IL",
-      "photo": "https://angular.io/assets/images/tutorials/faa/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
-      "availableUnits": 4,
-      "wifi": true,
-      "laundry": true
-    },
-    {
-      "id": 1,
-      "name": "A113 Transitional Housing",
-      "city": "Santa Monica",
-      "state": "CA",
-      "photo": "https://angular.io/assets/images/tutorials/faa/brandon-griggs-wR11KBaB86U-unsplash.jpg",
-      "availableUnits": 0,
-      "wifi": false,
-      "laundry": true
-    },
-    {
-      "id": 2,
-      "name": "Warm Beds Housing Support",
-      "city": "Juneau",
-      "state": "AK",
-      "photo": "https://angular.io/assets/images/tutorials/faa/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
-      "availableUnits": 1,
-      "wifi": false,
-      "laundry": false
-    },
-    {
       "id": 3,
       "name": "Homesteady Housing",
       "city": "Chicago",
@@ -99,36 +69,6 @@
       "availableUnits": 6,
       "wifi": true,
       "laundry": true
-    },
-    {
-      "id": 12,
-      "name": "test",
-      "city": "test",
-      "state": "GA",
-      "photo": "C:\\fakepath\\expose vs publish.PNG",
-      "availableUnits": 9,
-      "wifi": "True",
-      "laundry": "False"
-    },
-    {
-      "id": 92,
-      "name": "test",
-      "city": "test",
-      "state": "KY",
-      "photo": "C:\\fakepath\\advantages of docker over Vm.PNG",
-      "availableUnits": 22,
-      "wifi": "True",
-      "laundry": "False"
-    },
-    {
-      "id": 44,
-      "name": "test",
-      "city": "test",
-      "state": "IN",
-      "photo": "C:\\fakepath\\docker file.PNG",
-      "availableUnits": 7,
-      "wifi": "False",
-      "laundry": "False"
     }
   ]
 }

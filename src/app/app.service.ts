@@ -4,13 +4,16 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class AppService {
-baseURL = "http://localhost:3000/"
+baseURL = "http://localhost:3000/locations"
   constructor(private http : HttpClient) { }
   getList(){
-    return this.http.get(this.baseURL+"locations")
+    return this.http.get(this.baseURL)
   }
   saveLocation(location:any){
   //console.warn("new location : ", location)
-  return this.http.post(this.baseURL+"locations",location)
+  return this.http.post(this.baseURL,location)
+  }
+  removeLocation(id:number){
+     return this.http.delete(`${this.baseURL}/${id}`)
   }
 }
