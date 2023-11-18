@@ -109,6 +109,26 @@
       "availableUnits": 9,
       "wifi": "True",
       "laundry": "False"
+    },
+    {
+      "id": 92,
+      "name": "test",
+      "city": "test",
+      "state": "KY",
+      "photo": "C:\\fakepath\\advantages of docker over Vm.PNG",
+      "availableUnits": 22,
+      "wifi": "True",
+      "laundry": "False"
+    },
+    {
+      "id": 44,
+      "name": "test",
+      "city": "test",
+      "state": "IN",
+      "photo": "C:\\fakepath\\docker file.PNG",
+      "availableUnits": 7,
+      "wifi": "False",
+      "laundry": "False"
     }
   ]
 }

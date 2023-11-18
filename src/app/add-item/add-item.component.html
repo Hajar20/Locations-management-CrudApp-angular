@@ -1,5 +1,11 @@
 <br>
 <h3>Add a new location</h3>
+
+<div  *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Success !</strong> A new location has been added successfully.
+  <button (click)="closeAlert()"  type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
 <form [formGroup]="location" (ngSubmit)="collectData()" >
   <div class="form-row">
     <div class="form-group col-md-6">

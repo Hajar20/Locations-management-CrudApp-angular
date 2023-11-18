@@ -19,6 +19,7 @@ export class AddItemComponent implements OnInit{
     wifi : new FormControl('False'),
     laundry : new FormControl('False')
   })
+  alert : boolean = false
  constructor(private app : AppService) {
  }
    stateCodes:any[] = [];
@@ -32,7 +33,12 @@ export class AddItemComponent implements OnInit{
 collectData(): void{
   //console.warn(this.location.value)
   this.app.saveLocation(this.location.value).subscribe((e:any) =>{
-    console.warn("The location :",e)
+    //console.warn("The location :",e)
+    this.alert=true
+    this.location.reset({})
   })
+}
+closeAlert(){
+   this.alert=false
 }
 }
