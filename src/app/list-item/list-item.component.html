@@ -40,7 +40,12 @@
     </td>
     <td>
       <div >
-        <i (click)="removeLocation(l.id)"  class="fa fa-trash" style="font-size:25px;color:red;"></i>
+        <i (click)="removeLocation(l.id)"  title="Delete this location" class="fa fa-trash" style="font-size:25px;color:red;"></i>
+        <a routerLink="/update/{{l.id}}">
+           <i title="Edit" class="fa fa-edit" style="font-size:25px;color:yellow;margin-left: 3%;margin-top:6%"></i>
+        </a>
+        <i (click)="displayDetails(l.id)"  title="More details" class="fa fa-file" style="font-size:25px;color:deepskyblue;margin-left: 3%;margin-top:6%"></i>
+
         <!--
          <a class="btn btn-primary" href="#">Details</a> &nbsp;
         <a class="btn btn-danger" href="#">Delete</a> &nbsp;

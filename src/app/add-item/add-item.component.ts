@@ -32,6 +32,22 @@ export class AddItemComponent implements OnInit{
  }
 collectData(): void{
   //console.warn(this.location.value)
+  if(this.location.value.wifi === "False"){
+    // @ts-ignore
+    this.location.value.wifi = false
+  }
+  if(this.location.value.wifi === "True"){
+    // @ts-ignore
+    this.location.value.wifi = true
+  }
+  if(this.location.value.laundry === "False"){
+    // @ts-ignore
+    this.location.value.laundry = false
+  }
+  if(this.location.value.laundry === "True"){
+    // @ts-ignore
+    this.location.value.laundry = true
+  }
   this.app.saveLocation(this.location.value).subscribe((e:any) =>{
     //console.warn("The location :",e)
     this.alert=true

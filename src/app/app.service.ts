@@ -16,4 +16,11 @@ baseURL = "http://localhost:3000/locations"
   removeLocation(id:number){
      return this.http.delete(`${this.baseURL}/${id}`)
   }
+  getLocation(id:number){
+  return this.http.get(`${this.baseURL}/${id}`)
+  }
+  updateLocation(id:number,updatedLocation:any){
+   return this.http.put(`${this.baseURL}/${id}`,updatedLocation)
+  }
+
 }

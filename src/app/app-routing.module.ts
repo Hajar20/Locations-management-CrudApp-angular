@@ -8,6 +8,10 @@ import {RegisterComponent} from './register/register.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: ListItemComponent
+  },
+  {
     component: RegisterComponent,
     path: 'register'
   },
@@ -25,7 +29,7 @@ const routes: Routes = [
   },
   {
     component: UpdateItemComponent,
-    path: 'update'
+    path: 'update/:id'
   },
 ];
 @NgModule({

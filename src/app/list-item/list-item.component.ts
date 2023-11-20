@@ -30,4 +30,10 @@ export class ListItemComponent implements OnInit{
   closeAlert(){
     this.alert=false
   }
+  displayLocation(id:number){
+
+  }
+  displayDetails(id:number){
+
+  }
 }
