@@ -1,0 +1,30 @@
+<br>
+<h3 style="text-align: center">Location details</h3>
+<br>
+<div *ngIf="locationDetails" class="card mb-3" style="width: 60%;margin-left: 22%">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{locationDetails.photo}}" class="img-fluid rounded-start" alt="image">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{locationDetails.name}}</h5>
+        <p class="card-text"><strong>City : </strong>{{locationDetails.city}}</p>
+        <p class="card-text"><strong>State : </strong>{{locationDetails.state}}</p>
+        <p class="card-text"><strong>Available Units:</strong> {{ locationDetails.availableUnits }}</p>
+        <p class="card-text">
+          <ng-container *ngIf="locationDetails.wifi !== undefined">
+            <p *ngIf="locationDetails.wifi">WiFi Available</p>
+            <p *ngIf="!locationDetails.wifi">WiFi Not Available</p>
+          </ng-container>
+        </p>
+        <p class="card-text">
+          <ng-container *ngIf="locationDetails.laundry !== undefined">
+            <p *ngIf="locationDetails.laundry">Laundry Available</p>
+            <p *ngIf="!locationDetails.laundry">Laundry Not Available</p>
+          </ng-container>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

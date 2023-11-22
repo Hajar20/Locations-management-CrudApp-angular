@@ -5,8 +5,13 @@ import {LoginComponent} from './login/login.component';
 import {ListItemComponent} from './list-item/list-item.component';
 import {UpdateItemComponent} from './update-item/update-item.component';
 import {RegisterComponent} from './register/register.component';
+import {DetailsComponent} from './details/details.component';
 
 const routes: Routes = [
+  {
+    component: DetailsComponent,
+    path: 'details/:id'
+  },
   {
     path: '',
     component: ListItemComponent
