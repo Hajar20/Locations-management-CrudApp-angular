@@ -18,6 +18,7 @@ export class ListItemComponent implements OnInit{
   fetchLocationList(): void {
     this.app.getList().subscribe((res) => {
       this.collection = res;
+      console.log('locations :', this.collection)
     });
   }
   removeLocation(id:number){
