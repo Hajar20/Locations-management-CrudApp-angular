@@ -1,0 +1,19 @@
+apiVersion : apps/v1 #the kubernetes api that will read the file understand what's its content in order to run the app
+kind: Deployment #the type of Kubernetes resource, it means that the YAML describes the configuration for a Deployment resource
+metadata:
+  name: angular-deployment #name of the app, for the microservice architecture this should be the name of the microservice
+spec : #define the desired specification for the resource describes the desired state of the resource.
+  selector:  #specify how the Deployment should select which pods to manage
+    matchLabels: #matches labels on Pods, manage Pods with the label app: angular.
+      app: angular
+  replicas: 2 #number of instances of the app that should be running
+  template:
+    metadata:
+      labels:
+        app: angular
+    spec:
+      containers: #kubernetes must know which container we want to use
+        - name: angular #the name of the container within the pod
+          image: aithajar/angular-app:v1 #the image from docker hub
+          ports:
+            - containerPort: 80 #it maps to the port inside the image
