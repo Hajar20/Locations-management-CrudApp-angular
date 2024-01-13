@@ -1,0 +1,15 @@
+kind: Service #service to map our pods into one single entry, into one single IP @
+apiVersion: v1
+metadata:
+  name: angular-service
+spec:
+  selector:
+    app: angular
+  ports:
+    - protocol: TCP
+      port: 80 #it will map the port 80 to the target 80 inside the docker hub
+      targetPort: 80
+      nodePort: 31000
+  type: NodePort #we use NodePort becuz we cannot use a load balancer but we can use it later when we'll deploy this app into Microsoft Azure IKS service
+
+#Note that if you're running kubernetes within docker desktop, you can access your app using localhost : http://localhost:31000
